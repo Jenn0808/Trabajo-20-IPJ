@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff"
+    tools:context=".Cargando">
+
+    <LinearLayout
+        android:layout_width="354dp"
+        android:layout_height="650dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.617">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="205dp"
+            android:src="@drawable/gato" />
+
+        <TextView
+            android:id="@+id/textoCarga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cargando..."
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"/>
+
+        <ProgressBar
+            android:id="@+id/barraProgreso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layMenu"
+        android:layout_width="354dp"
+        android:layout_height="650dp"
+        android:visibility="invisible"
+        android:background="#ffff"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.617">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/menu"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-medium"
+                android:text="Menú"
+                android:layout_marginLeft="80dp"
+                android:textColor="#000"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/botonRcordatorio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#fff"
+            android:onClick="onClickTareas"
+            android:text="Tareas"
+            android:textColor="#000" />
+        <Button
+            android:id="@+id/botonCalificacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#fff"
+            android:onClick="onClickCalificaciones"
+            android:text="Calificaciones"
+            android:textColor="#000" />
+        <Button
+            android:id="@+id/botonCalendario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#fff"
+            android:onClick="onClickCalendario"
+            android:text="Calendario"
+            android:textColor="#000" />
+        <Button
+            android:id="@+id/botonMapa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#fff"
+            android:onClick="onClickMapa"
+            android:text="Mapa"
+            android:textColor="#000" />
+        <Button
+            android:id="@+id/botonTutorial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#fff"
+            android:onClick="onClickTutorial"
+            android:text="Tutoriales"
+            android:textColor="#000" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

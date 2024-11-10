@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAD0C4"
+    tools:context=".AccesoActivity">
+
+    <!-- LinearLayout con imagen y mensaje de carga -->
+    <LinearLayout
+        android:layout_width="354dp"
+        android:layout_height="650dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.617">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="205dp"
+            android:src="@drawable/mariposa" />
+
+        <TextView
+            android:id="@+id/textoCarga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cargando..."
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"/>
+
+        <ProgressBar
+            android:id="@+id/barraProgreso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <!-- LinearLayout con menú -->
+    <LinearLayout
+        android:id="@+id/layMenu"
+        android:layout_width="354dp"
+        android:layout_height="650dp"
+        android:visibility="invisible"
+        android:background="#FAD0C4"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.617">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/menu"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-medium"
+                android:text="Menú"
+                android:layout_marginLeft="80dp"
+                android:textColor="#000"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <!-- Botones con separación agradable -->
+        <Button
+            android:id="@+id/botonRecordatorio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#fff"
+            android:onClick="onClickRecordatorio"
+            android:text="Registro"
+            android:textColor="#000" />
+
+        <Button
+            android:id="@+id/botonVentana"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#fff"
+            android:onClick="onClickVentana"
+            android:text="Calendario"
+            android:textColor="#000" />
+
+        <Button
+            android:id="@+id/botonMapita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#fff"
+            android:onClick="onClickMapita"
+            android:text="GPS"
+            android:textColor="#000" />
+        <Button
+            android:id="@+id/botonVideos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#fff"
+            android:onClick="onClickVideos"
+            android:text="Videos"
+            android:textColor="#000" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
